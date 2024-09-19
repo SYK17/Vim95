@@ -1,15 +1,17 @@
 " -------
 " GENERAL
 " -------
+
+" enable colors in terminal
+" set t_Co=256 
+set termguicolors
+
 "Set leader key to space
 let mapleader = " "
 
 " COPY & PASTE
 " Use system clipboard
 set clipboard+=unnamedplus
-" Use Ctrl+C and Ctrl+V for clipboard operations
-vnoremap <C-c> "+y
-nnoremap <C-v> "+p
 
 " Store swap in central location
 set directory=$HOME/.config/vim/swapfiles//
@@ -33,16 +35,22 @@ set wrap!
 " PLUGINS
 " -------
 call plug#begin('~/.vim/plugged')
-Plug 'robertmeta/nofrils'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ap/vim-css-color'
 Plug 'machakann/vim-sandwich'
-call plug#end()
-
+Plug 'tpope/vim-vinegar'
+Plug 'gosukiwi/vim-smartpairs'
 " ------
 " THEMES
 " ------
-colorscheme nofrils-dark
+Plug 'robertmeta/nofrils'
+Plug 'stefanvanburen/rams.vim'
+Plug 'aditya-azad/candle-grey'
+Plug 'jaredgorski/Mies.vim'
+call plug#end()
+
+" Default color
+colorscheme mies
 
 " ------
 " REMAPS
@@ -52,3 +60,11 @@ colorscheme nofrils-dark
 
 vnoremap <gg> <gg>_
 vnoremap G G$
+
+"inoremap (; (<CR>);<C-c>O
+"inoremap (, (<CR>),<C-c>O
+"inoremap {; {<CR>};<C-c>O
+"inoremap {, {<CR>},<C-c>O
+"inoremap [; [<CR>];<C-c>O
+"inoremap [, [<CR>],<C-c>O
+
