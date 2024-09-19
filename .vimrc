@@ -13,6 +13,9 @@ nnoremap <C-v> "+p
 " Some other useful clipboard-related settings
 set pastetoggle=<F2>  " Toggle paste mode
 
+" Store swap in central location
+set directory=$HOME/.config/vim/swapfiles//
+
 " LINE NUMBERS
 " Hybrid line numbers on in N-mode and off in I-mode
 :set number
@@ -43,6 +46,4 @@ colorscheme nofrils-dark
 "nnoremap <C-d> <C-d>zz
 
 vnoremap <gg> <gg>_
-nnoremap <gg> <gg>_
 vnoremap G G$
-nnoremap G G$
